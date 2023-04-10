@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+content="height=device-height, initial-scale=1.0"
+> 
+<title>Boriso Cleaning</title>
+<style type="text/css">
+
+
+html {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#ServicesAnim{
+position: absolute;
+top:45;	
+width: 22%;
+height: 3%;
+}
+
+#ButtonDisplay {
+position: absolute;
+top : 30%;
+width: 100%;
+height: 20%;
+}	
+
+.DefaultNavButton{
+width: 20%;
+margin-left: 4%;
+border-top-style: none;
+font-family: "Arial";
+font-style: bold;
+font-size:20px;
+
+background-color: transparent;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+}
+
+
+
+#FrontPageLogo{
+	position: absolute;
+left: 42%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+width: 15%;
+}
+
+#HTMLCast{
+position: absolute;
+top:38%;
+width: 99%;
+visibility: true;
+height: calc(99% - 38%);
+}
+
+#ServicesAnim{
+	position: absolute;
+top:35%; 
+left:4%;	
+width: 1;
+height: 1%;
+visibility: hidden;
+overflow: auto;	
+background-color: #FDD20D;
+}
+
+
+#LocationsAnim{
+	position: absolute;
+top:35%; 
+left:28%;	
+width: 1;
+height: 1%;
+overflow: auto;	
+background-color: #FDD20D;
+}
+
+#EstimateAnim{
+	position: absolute;
+top:35%; 
+left: 52%;	
+width: 1;
+height: 1%;
+overflow: auto;	
+background-color: #FDD20D;
+}
+
+#ContactAnim{
+	position: absolute;
+top:35%;
+width: 1;
+height: 1%;
+left: 76%;
+overflow: auto;	
+background-color: #FDD20D;
+}
+
+</style>
+<body bgcolor="#80bfff">
+
+
+<iframe  id ="HTMLCast" bgcolor="white" style="border:none;" scrolling="yes"></iframe>
+
+
+<img id ="FrontPageLogo" src="Yellownobackdownload.png"
+onmousedown="return false" 
+onContextMenu="return false;"
+></img>
+
+
+
+<nav id="ButtonDisplay">
+
+
+
+<button id ="Services" class = "DefaultNavButton"  onclick= "Click(this)"
+onmouseover="Animate(this)" 
+onmouseout="Close(this)"
+>Services</button>
+
+<button id = "Locations" class = "DefaultNavButton" 
+onmouseover = "Animate(this)" 
+onmouseout="Close(this)"
+onclick="Click(this)" 
+>Locations</button>
+
+
+
+<button id = "Estimate" class = "DefaultNavButton" 
+onmouseover = "Animate(this)"
+onclick="Click(this)" 
+onmouseout="Close(this)"
+>Get An Estimate</button>
+
+
+
+<button id = "Contact" class = "DefaultNavButton"  
+onmouseover = "Animate(this)" 
+onmouseout="Close(this)"
+onclick="Click(this)" 
+
+>Contact Us</button>
+ </nav>
+
+<div id = "ServicesAnim" ></div>
+<div id = "LocationsAnim" ></div>
+<div id = "EstimateAnim" ></div>
+<div id = "ContactAnim" ></div>
+
+
+<script>
+
+
+
+
+function Click(id){
+
+if (id.id == "Services"){
+
+if 	((document.getElementById("HTMLCast").src.includes("Services.html"))==false){
+	console.log(document.getElementById("HTMLCast").src);
+document.getElementById("HTMLCast").src = "Services.html"	
+document.getElementById("HTMLCast").style.visibility = "visible";
+}
+}
+
+if (id.id == "Locations"){
+
+if 	((document.getElementById("HTMLCast").src.includes("Location.html"))==false){
+	console.log(document.getElementById("HTMLCast").src);
+document.getElementById("HTMLCast").src = "Location.html"	
+document.getElementById("HTMLCast").style.visibility = "visible";
+}
+}
+
+
+
+
+
+
+
+if (id.id == "Contact"){
+
+if 	((document.getElementById("HTMLCast").src.includes("Contact.html"))==false){
+	console.log(document.getElementById("HTMLCast").src);
+document.getElementById("HTMLCast").src = "Contact.html"	
+document.getElementById("HTMLCast").style.visibility = "visible";
+}
+}
+
+
+if (id.id == "Estimate"){
+
+if 	((document.getElementById("HTMLCast").src.includes("emailtest.html"))==false){
+	console.log(document.getElementById("HTMLCast").src);
+window.location.assign ("emailtest.html");	
+}
+}
+
+    
+}
+
+
+function Close(out){
+	document.getElementById(out.id).style.color = "black"
+
+	if (out.id == "Services"){
+		console.log("Worked");
+    document.getElementById("ServicesAnim").style.visibility = "hidden";
+    document.getElementById("ServicesAnim").width = 0;	
+	}
+
+
+if (out.id == "Locations"){
+		console.log("Worked");
+    document.getElementById("LocationsAnim").style.visibility = "hidden";
+    document.getElementById("LocationsAnim").width = 0;	
+	}
+
+	if (out.id == "Estimate"){
+		console.log("Worked");
+    document.getElementById("EstimateAnim").style.visibility = "hidden";
+    document.getElementById("EstimateAnim").width = 0;	
+	}
+
+
+if (out.id == "Contact"){
+		console.log("Worked");
+    document.getElementById("ContactAnim").style.visibility = "hidden";
+    document.getElementById("ContactAnim").width = 0;	
+	}
+}
+
+
+
+
+
+
+
+function Animate(animation){
+
+
+
+var width = 0;
+const test = setInterval(Test, 10);
+
+function Test(){
+	width++;
+if (animation.id == "Services"){
+if (!(document.getElementById("Locations").style.color == "black")||!(document.getElementById("Estimate").style.color == "black")||
+    !(document.getElementById("Contact").style.color == "black")
+	)	{
+
+document.getElementById("Locations").style.color = "black"
+document.getElementById("Estimate").style.color = "black"
+document.getElementById("Contact").style.color = "black"
+
+document.getElementById("ContactAnim").style.visibility = "hidden";
+document.getElementById("EstimateAnim").style.visibility = "hidden";
+document.getElementById("LocationsAnim").style.visibility = "hidden";
+}
+}
+
+
+if (animation.id == "Locations"){
+if (!(document.getElementById("Services").style.color == "black")||!(document.getElementById("Estimate").style.color == "black")||
+    !(document.getElementById("Contact").style.color == "black")
+	)	{
+
+document.getElementById("Services").style.color = "black"
+document.getElementById("Estimate").style.color = "black"
+document.getElementById("Contact").style.color = "black"
+
+document.getElementById("ContactAnim").style.visibility = "hidden";
+document.getElementById("EstimateAnim").style.visibility = "hidden";
+document.getElementById("ServicesAnim").style.visibility = "hidden";
+}
+}
+
+
+if (animation.id == "Contact"){
+if (!(document.getElementById("Services").style.color == "black")||!(document.getElementById("Estimate").style.color == "black")||
+    !(document.getElementById("Contact").style.color == "black")
+	)	{
+
+document.getElementById("Services").style.color = "black"
+document.getElementById("Estimate").style.color = "black"
+document.getElementById("Locations").style.color = "black"
+
+document.getElementById("LocationsAnim").style.visibility = "hidden";
+document.getElementById("EstimateAnim").style.visibility = "hidden";
+document.getElementById("ServicesAnim").style.visibility = "hidden";
+}
+}
+
+if (animation.id == "Estimate"){
+if (!(document.getElementById("Services").style.color == "black")||!(document.getElementById("Estimate").style.color == "black")||
+    !(document.getElementById("Contact").style.color == "black")
+	)	{
+
+document.getElementById("Services").style.color = "black"
+document.getElementById("Locations").style.color = "black"
+document.getElementById("Contact").style.color = "black"
+
+document.getElementById("ContactAnim").style.visibility = "hidden";
+document.getElementById("LocationsAnim").style.visibility = "hidden";
+document.getElementById("ServicesAnim").style.visibility = "hidden";
+}
+}
+
+
+
+if (animation.id == "Locations"){
+document.getElementById("Services").style.color = "black"
+document.getElementById("Estimate").style.color = "black"
+document.getElementById("Contact").style.color = "black"
+document.getElementById("ContactAnim").style.visibility = "hidden";
+document.getElementById("EstimateAnim").style.visibility = "hidden";
+document.getElementById("ServicesAnim").style.visibility = "hidden";
+}
+
+if (animation.id == "Estimate"){
+document.getElementById("Services").style.color = "black"
+document.getElementById("Locations").style.color = "black"
+document.getElementById("Contact").style.color = "black"
+document.getElementById("ContactAnim").style.visibility = "hidden";
+document.getElementById("LocationsAnim").style.visibility = "hidden";
+document.getElementById("ServicesAnim").style.visibility = "hidden";
+}
+
+if (animation.id == "Contact"){
+document.getElementById("Services").style.color = "black"
+document.getElementById("Locations").style.color = "black"
+document.getElementById("Estimate").style.color = "black"
+document.getElementById("EstimateAnim").style.visibility = "hidden";
+document.getElementById("LocationsAnim").style.visibility = "hidden";
+document.getElementById("ServicesAnim").style.visibility = "hidden";
+}
+
+if (width<=20){
+
+
+
+if (animation.id == "Services"){
+document.getElementById("ServicesAnim").style.visibility = "visible";
+document.getElementById("ServicesAnim").style.width = width + '%';
+document.getElementById("Services").style.color = "#FDD20D";
+}
+
+if (animation.id == "Locations"){
+document.getElementById("LocationsAnim").style.visibility = "visible";
+document.getElementById("LocationsAnim").style.width = width + '%';
+document.getElementById("Locations").style.color = "#FDD20D";
+}
+
+if (animation.id == "Estimate"){
+document.getElementById("EstimateAnim").style.visibility = "visible";
+document.getElementById("EstimateAnim").style.width = width + '%';
+document.getElementById("Estimate").style.color = "#FDD20D";
+}
+
+if (animation.id == "Contact"){
+document.getElementById("ContactAnim").style.visibility = "visible";
+document.getElementById("ContactAnim").style.width = width + '%';
+document.getElementById("Contact").style.color = "#FDD20D";
+}
+
+console.log(width);
+}
+else {
+clearInterval(test);
+}	
+
+
+
+}
+}
+
+</script>
+
+
+
+
+</body>
+</html>

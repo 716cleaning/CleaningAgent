@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<style type="text/css">
+ 
+ html{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ }
+
+ body{
+  position: absolute;
+  background-color: lightblue;
+  width: 100%;
+  height: 100%;
+ } 
+
+#WordCompiler{
+  visibility: hidden;
+}
+#Name {
+ position: absolute;
+ left: 30%;
+ top: 15%;
+ width: 40%;
+ height:5%; 
+}
+
+#PreferredContact{
+ position: absolute;
+ left: 30%;
+ top: 25%;
+ width: 40%;
+ height:5%; 
+}
+
+#City {
+ position: absolute;
+ left: 30%;
+ top: 35%;
+ width: 40%;
+ height:5%; 
+}
+
+#Bedroom {
+ position: absolute;
+ left: 30%;
+ top: 45%;
+ width: 40%;
+ height:5%; 
+}
+
+#Bathroom {
+ position: absolute;
+ left: 30%;
+ top: 55%;
+ width: 40%;
+ height:5%; 
+}
+
+#howbigishome {
+ position: absolute;
+ left: 30%;
+ top: 65%;
+ width: 40%;
+ height:5%; 
+}
+
+
+
+#Submit{
+ position: absolute;
+ left: 40%;
+ top: 75%;
+ width: 20%;
+ height:10%; 
+}
+
+
+#BackButton{
+ position: absolute;
+ left: 0%;
+ top: 0%;
+ width: 10%;
+ height:5%; 
+}
+
+#Error{
+ position: absolute;
+ visibility: hidden;
+ color: red;
+ left: 30%;
+ top: 87%;
+ width: 40%;
+ height:10%; 
+}
+
+</style>
+
+
+<body>
+  
+
+
+<input type="text" id = "Name" name = "Name"
+onclick= "ClearPreText(this)" 
+value = "Name you would like to be called by">
+
+<input type="text" id = "PreferredContact" name = "PContact"
+onclick =  "ClearPreText(this)"
+value = "Preferred Method of Contact(Phone or Email)">
+
+<input type="text" id = "City" name = "City"
+onclick =  "ClearPreText(this)"
+value = "Town/City">
+
+<input  type = "text" id = "Bedroom" name = "Bedroom"
+onclick =  "ClearPreText(this)"
+value="Bedroom(s)">
+  
+
+
+<input type = "text" id = "Bathroom"  name = "Bathroom"
+onclick="ClearPreText(this)" 
+value="Bathroom(s)">
+
+
+
+<input  type = "text" id = "howbigishome" name = "sqft"
+onclick="ClearPreText(this)" 
+value="Sq. ft of home (An Estimate is allowed)">
+  
+<input type = "submit" id = "Submit"
+onclick="Test()" 
+value="Submit" 
+>
+
+
+<pre id = "WordCompiler" visibility = "hidden" >hello</pre>
+
+
+<p id = "Error"> You have not completed the information, please complete the form.</p>
+
+
+
+<button id = "BackButton" onclick="Back()"><- Back</button>
+
+</body>
+
+<script>
+
+document.getElementById("Bedroom").addEventListener("keydown", function(event){
+   if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"){
+  event.preventDefault();
+document.getElementById("Error").style.visibility = "visible";
+document.getElementById("Error").innerHTML = "Please type in a number."
+  const NumOccured = setInterval(NumberTest,1500);
+  function NumberTest(){
+   if (document.getElementById("Error").style.visibility == "visible"){
+  document.getElementById("Error").style.visibility = "hidden";
+  clearInterval(NumOccured);
+   }
+   else{
+    clearInterval(NumOccured);
+   }
+  }
+}
+});
+
+
+
+document.getElementById("Bathroom").addEventListener("keydown", function(event){
+   if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"){
+  event.preventDefault();
+document.getElementById("Error").style.visibility = "visible";
+document.getElementById("Error").innerHTML = "Please type in a number."
+  const NumOccured = setInterval(NumberTest,1500);
+  function NumberTest(){
+   if (document.getElementById("Error").style.visibility == "visible"){
+  document.getElementById("Error").style.visibility = "hidden";
+  clearInterval(NumOccured);
+   }
+   else{
+    clearInterval(NumOccured);
+   }
+  }
+}
+});
+
+
+
+document.getElementById("howbigishome").addEventListener("keydown", function(event){
+   if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"){
+  event.preventDefault();
+document.getElementById("Error").style.visibility = "visible";
+document.getElementById("Error").innerHTML = "Please type in a number."
+  const NumOccured = setInterval(NumberTest,1500);
+  function NumberTest(){
+   if (document.getElementById("Error").style.visibility == "visible"){
+  document.getElementById("Error").style.visibility = "hidden";
+  clearInterval(NumOccured);
+   }
+   else{
+    clearInterval(NumOccured);
+   }
+  }
+}
+});
+
+
+function Back(){
+window.location.assign("Boriso.html");
+}
+
+
+ function ClearPreText(object){
+
+
+    if (document.getElementById("Name").value == "" && document.getElementById(object.id)!= document.getElementById("Name")){
+      document.getElementById("Name").value = "Name you would like to be called by"
+    }
+     else if (document.getElementById(object.id) == document.getElementById("Name")){
+      document.getElementById("Name").value = "" 
+     }
+
+
+
+if (document.getElementById("PreferredContact").value == "" && document.getElementById(object.id)!= document.getElementById("PreferredContact")){
+      document.getElementById("PreferredContact").value = "Preferred Method of Contact(Phone or Email)"
+    }
+     else if (document.getElementById(object.id) == document.getElementById("PreferredContact")){
+      document.getElementById("PreferredContact").value = "" 
+     }
+
+    
+    if (document.getElementById("City").value == "" && document.getElementById(object.id)!= document.getElementById("City")){
+      document.getElementById("City").value = "Town/City"
+    }
+     else if (document.getElementById(object.id) == document.getElementById("City")){
+      document.getElementById("City").value = "" 
+     }
+
+  
+
+  if (document.getElementById("Bedroom").value == "" && document.getElementById(object.id)!= document.getElementById("Bedroom")){
+    document.getElementById("Bedroom").value = "Bedroom(s)"
+    }
+     else if (document.getElementById(object.id) == document.getElementById("Bedroom")){
+      document.getElementById("Bedroom").value = "" 
+     }
+
+     if (document.getElementById("Bathroom").value == "" && document.getElementById(object.id)!= document.getElementById("Bathroom")){
+      document.getElementById("Bathroom").value = "Bathroom(s)"
+    }
+     else if (document.getElementById(object.id) == document.getElementById("Bathroom")){
+      document.getElementById("Bathroom").value = "" 
+     }
+
+
+     if (document.getElementById("howbigishome").value == "" && document.getElementById(object.id)!= document.getElementById("howbigishome")){
+      document.getElementById("howbigishome").value = "Sq. ft of home (An Estimate is allowed)"
+    }
+     else if (document.getElementById(object.id) == document.getElementById("howbigishome")){
+      document.getElementById("howbigishome").value = "" 
+     }
+
+ }
+
+
+  
+ function Test(){
+
+   var skipaline ="%0D%0A"
+  var BedInfo = document.getElementById("Bedroom").value;
+  var BathInfo = document.getElementById("Bathroom").value;
+  var CityInfo = document.getElementById("City").value;
+  var SqftInfo = document.getElementById("howbigishome").value;
+  var PreferredContactInfo = document.getElementById("PreferredContact").value;
+  var NameInfo = document.getElementById("Name").value;
+
+
+   if(BedInfo!="Bedrooms"&&BathInfo!="Bathrooms"&&(CityInfo.length!=0 && CityInfo!="Town/City")&&(NameInfo.length!=0 && NameInfo!="Name you would like to be called by")&& SqftInfo!="Sq. ft of home (An Estimate is allowed)"&&(PreferredContactInfo.length!=0 && PreferredContactInfo!="Preferred Method of Contact(Phone or Email)")) {
+  alert("Information compiled! Click send to send email. Thank you!");
+  var subject = "Estimate Information"
+  var body = skipaline+"Name:"+NameInfo+skipaline+skipaline+skipaline+"Town/City:"+CityInfo+skipaline+skipaline+skipaline+"Bedrooms:"+BedInfo+skipaline+skipaline+skipaline+"Bathrooms:"+BathInfo+skipaline+skipaline+skipaline+"Sq. ft:"+SqftInfo+skipaline+skipaline+skipaline+"Preferred method of reach: %20"+PreferredContactInfo;
+  ;
+   document.getElementById("WordCompiler").innerHTML = body
+
+  var link = "https://mail.google.com/mail/?view=cm&fs=1&to=borisocleaning@gmail.com&su="+subject+"&body="+document.getElementById("WordCompiler").textContent;
+
+  window.location.assign(link);
+  console.log(CityInfo.length);
+  console.log(NameInfo.length);
+}
+
+else {
+  console.log("Came here");
+  document.getElementById("Error").style.visibility = "visible";
+  document.getElementById("Error").innerHTML = "You have not completed the information, please complete the form.";
+  const ErrorOccured = setInterval(ErrorTest,3000);
+
+
+function ErrorTest(){
+   if (document.getElementById("Error").style.visibility == "visible"){
+  document.getElementById("Error").style.visibility = "hidden";
+  clearInterval(ErrorOccured);
+   }
+   else{
+    clearInterval(ErrorOccured);
+   }
+  }
+
+
+}
+ } 
+</script>
+</html>
