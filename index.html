@@ -267,7 +267,6 @@ if (out.id == "Contact" &&(Device=="Computer")){
 function Animate(animation){
 
 
-
 var width = 0;
 const test = setInterval(Test, 10);
 
@@ -277,7 +276,6 @@ if (animation.id == "Services"){
 if (!(document.getElementById("Locations").style.color == "black")||!(document.getElementById("Estimate").style.color == "black")||
     !(document.getElementById("Contact").style.color == "black")
 	&&(Device=="Computer"))	{
-
 document.getElementById("Locations").style.color = "black"
 document.getElementById("Estimate").style.color = "black"
 document.getElementById("Contact").style.color = "black"
@@ -368,37 +366,71 @@ if (width<=20){
 
 
 
-if (animation.id == "Services" &&(Device=="Computer")){
+if (animation.id == "Services"){
+if (Device=="Computer"){
 document.getElementById("ServicesAnim").style.visibility = "visible";
 document.getElementById("ServicesAnim").style.width = width + '%';
 document.getElementById("Services").style.color = "#FDD20D";
+} 
+else {
+document.getElementById("Services").style.color = "#FDD20D";
+}
 }
 
-if (animation.id == "Locations" &&(Device=="Computer")){
+
+
+if (animation.id == "Locations"){
+
+	if (Device=="Computer"){
 document.getElementById("LocationsAnim").style.visibility = "visible";
 document.getElementById("LocationsAnim").style.width = width + '%';
 document.getElementById("Locations").style.color = "#FDD20D";
 }
+else {
+document.getElementById("Locations").style.color = "#FDD20D";
+}
 
-if (animation.id == "Estimate" &&(Device=="Computer")){
+}
+
+if (animation.id == "Estimate"){
+
+if (Device=="Computer"){
 document.getElementById("EstimateAnim").style.visibility = "visible";
 document.getElementById("EstimateAnim").style.width = width + '%';
 document.getElementById("Estimate").style.color = "#FDD20D";
 }
 
-if (animation.id == "Contact"&&(Device=="Computer")){
+else {
+document.getElementById("Estimate").style.color = "#FDD20D";
+}
+}
+
+if (animation.id == "Contact"){
+if (Device=="Computer"){
 document.getElementById("ContactAnim").style.visibility = "visible";
 document.getElementById("ContactAnim").style.width = width + '%';
 document.getElementById("Contact").style.color = "#FDD20D";
 }
 
+else {
+document.getElementById("Contact").style.color = "#FDD20D";
+}
+
+
+}
+
+
+
+
 console.log(width);
 }
 else {
+	if (Device =="Phone"){
+clearInterval(test);
+	document.getElementById(animation.id).style.color = "black";	
+	}
 clearInterval(test);
 }	
-
-
 
 }
 }
