@@ -166,7 +166,7 @@ onclick="Click(this)"
 
 
 <script>
-  
+    var Device = "Computer";
 	
 	if (navigator.userAgent.match(/Android/i)
          || navigator.userAgent.match(/webOS/i)
@@ -175,7 +175,7 @@ onclick="Click(this)"
          || navigator.userAgent.match(/iPod/i)
          || navigator.userAgent.match(/BlackBerry/i)
          || navigator.userAgent.match(/Windows Phone/i)) {
-            alert(" Phone detected. Please turn on the desktop mode on your phone for better functionality or use a computer.");
+            Device = "Phone";
          }
 
 
@@ -231,27 +231,27 @@ window.location.assign ("emailtest.html");
 function Close(out){
 	document.getElementById(out.id).style.color = "black"
 
-	if (out.id == "Services"){
+	if (out.id == "Services" &&(Device=="Computer")){
 		console.log("Worked");
     document.getElementById("ServicesAnim").style.visibility = "hidden";
     document.getElementById("ServicesAnim").width = 0;	
 	}
 
 
-if (out.id == "Locations"){
+if (out.id == "Locations" &&(Device=="Computer")){
 		console.log("Worked");
     document.getElementById("LocationsAnim").style.visibility = "hidden";
     document.getElementById("LocationsAnim").width = 0;	
 	}
 
-	if (out.id == "Estimate"){
+	if (out.id == "Estimate" &&(Device=="Computer")){
 		console.log("Worked");
     document.getElementById("EstimateAnim").style.visibility = "hidden";
     document.getElementById("EstimateAnim").width = 0;	
 	}
 
 
-if (out.id == "Contact"){
+if (out.id == "Contact" &&(Device=="Computer")){
 		console.log("Worked");
     document.getElementById("ContactAnim").style.visibility = "hidden";
     document.getElementById("ContactAnim").width = 0;	
@@ -276,7 +276,7 @@ function Test(){
 if (animation.id == "Services"){
 if (!(document.getElementById("Locations").style.color == "black")||!(document.getElementById("Estimate").style.color == "black")||
     !(document.getElementById("Contact").style.color == "black")
-	)	{
+	&&(Device=="Computer"))	{
 
 document.getElementById("Locations").style.color = "black"
 document.getElementById("Estimate").style.color = "black"
@@ -291,7 +291,7 @@ document.getElementById("LocationsAnim").style.visibility = "hidden";
 
 if (animation.id == "Locations"){
 if (!(document.getElementById("Services").style.color == "black")||!(document.getElementById("Estimate").style.color == "black")||
-    !(document.getElementById("Contact").style.color == "black")
+    !(document.getElementById("Contact").style.color == "black")&&(Device=="Computer")
 	)	{
 
 document.getElementById("Services").style.color = "black"
@@ -307,7 +307,7 @@ document.getElementById("ServicesAnim").style.visibility = "hidden";
 
 if (animation.id == "Contact"){
 if (!(document.getElementById("Services").style.color == "black")||!(document.getElementById("Estimate").style.color == "black")||
-    !(document.getElementById("Contact").style.color == "black")
+    !(document.getElementById("Contact").style.color == "black") && (Device=="Computer")
 	)	{
 
 document.getElementById("Services").style.color = "black"
@@ -322,7 +322,7 @@ document.getElementById("ServicesAnim").style.visibility = "hidden";
 
 if (animation.id == "Estimate"){
 if (!(document.getElementById("Services").style.color == "black")||!(document.getElementById("Estimate").style.color == "black")||
-    !(document.getElementById("Contact").style.color == "black")
+    !(document.getElementById("Contact").style.color == "black") &&(Device=="Computer")
 	)	{
 
 document.getElementById("Services").style.color = "black"
@@ -337,7 +337,7 @@ document.getElementById("ServicesAnim").style.visibility = "hidden";
 
 
 
-if (animation.id == "Locations"){
+if (animation.id == "Locations" &&(Device=="Computer")){
 document.getElementById("Services").style.color = "black"
 document.getElementById("Estimate").style.color = "black"
 document.getElementById("Contact").style.color = "black"
@@ -346,7 +346,7 @@ document.getElementById("EstimateAnim").style.visibility = "hidden";
 document.getElementById("ServicesAnim").style.visibility = "hidden";
 }
 
-if (animation.id == "Estimate"){
+if (animation.id == "Estimate" &&(Device=="Computer")){
 document.getElementById("Services").style.color = "black"
 document.getElementById("Locations").style.color = "black"
 document.getElementById("Contact").style.color = "black"
@@ -355,7 +355,7 @@ document.getElementById("LocationsAnim").style.visibility = "hidden";
 document.getElementById("ServicesAnim").style.visibility = "hidden";
 }
 
-if (animation.id == "Contact"){
+if (animation.id == "Contact" &&(Device=="Computer")){
 document.getElementById("Services").style.color = "black"
 document.getElementById("Locations").style.color = "black"
 document.getElementById("Estimate").style.color = "black"
@@ -368,25 +368,25 @@ if (width<=20){
 
 
 
-if (animation.id == "Services"){
+if (animation.id == "Services" &&(Device=="Computer")){
 document.getElementById("ServicesAnim").style.visibility = "visible";
 document.getElementById("ServicesAnim").style.width = width + '%';
 document.getElementById("Services").style.color = "#FDD20D";
 }
 
-if (animation.id == "Locations"){
+if (animation.id == "Locations" &&(Device=="Computer")){
 document.getElementById("LocationsAnim").style.visibility = "visible";
 document.getElementById("LocationsAnim").style.width = width + '%';
 document.getElementById("Locations").style.color = "#FDD20D";
 }
 
-if (animation.id == "Estimate"){
+if (animation.id == "Estimate" &&(Device=="Computer")){
 document.getElementById("EstimateAnim").style.visibility = "visible";
 document.getElementById("EstimateAnim").style.width = width + '%';
 document.getElementById("Estimate").style.color = "#FDD20D";
 }
 
-if (animation.id == "Contact"){
+if (animation.id == "Contact"&&(Device=="Computer")){
 document.getElementById("ContactAnim").style.visibility = "visible";
 document.getElementById("ContactAnim").style.width = width + '%';
 document.getElementById("Contact").style.color = "#FDD20D";
