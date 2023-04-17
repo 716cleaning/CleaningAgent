@@ -6,6 +6,7 @@ content="height=device-height, initial-scale=1.0"
 <style>
 
     body {
+
     overflow: hidden;
     }
 #LocationText{
@@ -13,11 +14,11 @@ position: absolute;
 left: 1%;	
 top: 25%;
 width:30%;
-height:60%;
+height:100%;
 font-family: "Arial";
 font-style: bold;
 white-space: pre-wrap;
-font-size: 1.4em;
+font-size: 20px;	
 }	
 
 #Buffalo{
@@ -45,7 +46,25 @@ You can give us a call at 716-567-8438!
 onmousedown="return false" 
 onContextMenu="return false;"
 ></img>
-
 </body>
+<script>
+
+    var Device = "Computer";
+    
+    if (navigator.userAgent.match(/Android/i)
+         || navigator.userAgent.match(/webOS/i)
+         || navigator.userAgent.match(/iPhone/i)
+         || navigator.userAgent.match(/iPad/i)
+         || navigator.userAgent.match(/iPod/i)
+         || navigator.userAgent.match(/BlackBerry/i)
+         || navigator.userAgent.match(/Windows Phone/i)) {
+            Device = "Phone";
+         }
+
+         if (Device =="Phone"){
+            document.body.style.overflow = "scroll";
+            alert ("We iniated");
+         }    
+</script>
 </meta>
 </html>
