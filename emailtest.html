@@ -334,9 +334,14 @@ if (document.getElementById("PreferredContact").value == "" && document.getEleme
   var body = skipaline+"Name:"+NameInfo+skipaline+skipaline+skipaline+"Town/City:"+CityInfo+skipaline+skipaline+skipaline+"Bedrooms:"+BedInfo+skipaline+skipaline+skipaline+"Bathrooms:"+BathInfo+skipaline+skipaline+skipaline+"Sq. ft:"+SqftInfo+skipaline+skipaline+skipaline+"Preferred method of reach: %20"+PreferredContactInfo;
   ;
    document.getElementById("WordCompiler").innerHTML = body
-
-  var link = "https://mail.google.com/mail/?view=cm&fs=1&to=borisocleaning@gmail.com&su="+subject+"&body="+document.getElementById("WordCompiler").textContent;
-
+    var link = "";
+ if (Device == "Computer"){
+ link = "https://mail.google.com/mail/?view=cm&fs=1&to=borisocleaning@gmail.com&su="+subject+"&body="+document.getElementById("WordCompiler").textContent;
+ }
+    else{
+    link = "mailto:borisocleaning@gmail.com?subject="+subject+"&body="+body;
+     alert("Update");
+    }
     
     
   window.location.assign(link);
