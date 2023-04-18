@@ -338,11 +338,7 @@ if (document.getElementById("PreferredContact").value == "" && document.getEleme
   var link = "https://mail.google.com/mail/?view=cm&fs=1&to=borisocleaning@gmail.com&su="+subject+"&body="+document.getElementById("WordCompiler").textContent;
 
     
-    var viewMode = getCookie("view-mode");
-if(viewMode == "mobile"){
- alert("Tried it");
- viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
-}
+    
   window.location.assign(link);
   console.log(CityInfo.length);
   console.log(NameInfo.length);
