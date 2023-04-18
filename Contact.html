@@ -77,6 +77,17 @@ onContextMenu="return false;"
 <p id = "gmailaddr">borisocleaning@gmail.com</p>
 </body>
 <script>
+    var Device = "Computer";
+    if (navigator.userAgent.match(/Android/i)
+         || navigator.userAgent.match(/webOS/i)
+         || navigator.userAgent.match(/iPhone/i)
+         || navigator.userAgent.match(/iPad/i)
+         || navigator.userAgent.match(/iPod/i)
+         || navigator.userAgent.match(/BlackBerry/i)
+         || navigator.userAgent.match(/Windows Phone/i)) {
+            Device = "Phone";
+         }
+    
 if (Device =="Phone"){
             document.getElementById("phone").style.width = '20%';
              document.getElementById("phonedesc").style.left = '30%';
