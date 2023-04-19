@@ -124,18 +124,21 @@ value = "Town/City">
 
 <input  type = "text" id = "Bedroom" name = "Bedroom"
 onclick =  "ClearPreText(this)"
+onkeyup = "WordTest(this)"       
 value="Bedroom(s)">
   
 
 
 <input type = "text" id = "Bathroom"  name = "Bathroom"
 onclick="ClearPreText(this)" 
+onkeyup = "WordTest(this)"
 value="Bathroom(s)">
 
 
 
 <input  type = "text" id = "howbigishome" name = "sqft"
-onclick="ClearPreText(this)" 
+onclick="ClearPreText(this)"
+onkeyup = "WordTest(this)"       
 value="Sq. ft of home (An Estimate is allowed)">
   
 <input type = "submit" id = "Submit"
@@ -196,10 +199,13 @@ if (Device=="Phone"){
             document.getElementById("howbigishome").style.left = '15%';
          }  
  
-           function RemoveText(target){
-            
-       
-           }
+ 
+ function WordTest (target){
+  if (document.getElementById(target.id).value.toUpperCase()!= document.getElementById(target.id).value.toLowerCase()){
+       var Editor = document.getElementById(target.id).value;
+            document.getElementById(target.id).value = Editor.slice(0,Editor.length-1);
+            }
+ }
         
 document.getElementById("Bedroom").addEventListener("keydown", function(event){
    if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"){    
@@ -208,10 +214,7 @@ document.getElementById("Error").style.visibility = "visible";
 document.getElementById("Error").innerHTML = "Please type in a number."
   const NumOccured = setInterval(NumberTest,1500);
   function NumberTest(){
-   if (document.getElementById("Bedroom").value.toUpperCase()!= document.getElementById("Bedroom").value.toLowerCase()){
-            document.getElementById("Bedroom").value = "";
-    alert("Sequence");
-            }
+   
    if (document.getElementById("Error").style.visibility == "visible"){
   document.getElementById("Error").style.visibility = "hidden";
   clearInterval(NumOccured);
