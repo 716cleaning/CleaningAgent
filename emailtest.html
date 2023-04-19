@@ -123,19 +123,22 @@ onclick =  "ClearPreText(this)"
 value = "Town/City">
 
 <input  type = "text" id = "Bedroom" name = "Bedroom"
-onclick =  "ClearPreText(this)"       
+onclick =  "ClearPreText(this)" 
+onkeyup = "WordTarget(this)"       
 value="Bedroom(s)">
   
 
 
 <input type = "text" id = "Bathroom"  name = "Bathroom"
 onclick="ClearPreText(this)" 
+onkeyup = "WordTarget(this)"              
 value="Bathroom(s)">
 
 
 
 <input  type = "text" id = "howbigishome" name = "sqft"
-onclick="ClearPreText(this)"      
+onclick="ClearPreText(this)"
+onkeyup = "WordTarget(this)"              
 value="Sq. ft of home (An Estimate is allowed)">
   
 <input type = "submit" id = "Submit"
@@ -198,10 +201,15 @@ if (Device=="Phone"){
  
  
  function WordTest (target){
-  if (document.getElementById(target.id).value.toUpperCase()!= document.getElementById(target.id).value.toLowerCase()){
-       var Editor = document.getElementById(target.id).value;
-            document.getElementById(target.id).value = Editor.slice(0,Editor.length-1);
-            }
+  if (target.key == "a" || target.key == "b" ||target.key == "c" ||target.key == "d" ||target.key == "e" ||target.key == "f" ||
+      target.key == "g" || target.key == "h" ||target.key == "i" ||target.key == "j" ||target.key == "k" ||target.key == "l" ||
+      target.key == "m" || target.key == "n" ||target.key == "o" ||target.key == "p" ||target.key == "q" ||target.key == "r" ||
+      target.key == "s" || target.key == "t" ||target.key == "u" ||target.key == "v" ||target.key == "w" ||target.key == "x" ||
+      target.key == "y" || target.key == "z" ||target.key == "."||target.key == ","||target.key == "/"||target.key == "'"||
+      target.key == ";"||target.key == "\"||target.key == "]"||target.key == "[" ||target.key == "=" ||target.key == "-"){
+              var Editor = document.getElementById(target.id).value;
+            document.getElementById(target.id).value = Editor.slice(0,Editor.length-1);                                                                        
+   }
  }
         
 document.getElementById("Bedroom").addEventListener("keydown", function(event){
