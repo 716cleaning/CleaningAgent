@@ -233,7 +233,7 @@ document.getElementById("Bathroom").addEventListener("keyup", function(event){
  var char = Editor.slice(Editor.length-1, Editor.length);
  if (char !="1"&& char!="2"&& char !="3"&& char !="4"&&  char !="5"&&  char !="6"&&  char !="7"&&  char !="8"&& char !="9" &&  char !="0" &&Device=="Phone"){
   alert(event.key);      
-  if (UpLength > Editor.Length){
+  if (UpLength < Editor.Length){
   var Editor = document.getElementById("Bathroom").value;
          document.getElementById("Bathroom").value = Editor.slice(0,Editor.length-1);
    
