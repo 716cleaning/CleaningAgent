@@ -204,7 +204,7 @@ if (Device=="Phone"){
             }
  }
         
-document.getElementById("Bedroom").addEventListener("keydown", "keyup", function(event){
+document.getElementById("Bedroom").addEventListener("keydown", function(event){
    if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"){    
     event.preventDefault();
 document.getElementById("Error").style.visibility = "visible";
@@ -225,7 +225,7 @@ document.getElementById("Error").innerHTML = "Please type in a number."
 
 
 
-document.getElementById("Bathroom").addEventListener("keydown", "keyup", function(event){
+document.getElementById("Bathroom").addEventListener("keydown", function(event){
    if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"){
   event.preventDefault();
 document.getElementById("Error").style.visibility = "visible";
@@ -245,7 +245,7 @@ document.getElementById("Error").innerHTML = "Please type in a number."
 
 
 
-document.getElementById("howbigishome").addEventListener("keydown", "keyup",function(event){
+document.getElementById("howbigishome").addEventListener("keydown", function(event){
    if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"){
   event.preventDefault();
 document.getElementById("Error").style.visibility = "visible";
