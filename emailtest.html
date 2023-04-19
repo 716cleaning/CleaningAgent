@@ -197,17 +197,14 @@ if (Device=="Phone"){
          }  
  
  
- function WordTest (target){
-  if (target.key == "a" || target.key == "b" ||target.key == "c" ||target.key == "d" ||target.key == "e" ||target.key == "f" ||
-      target.key == "g" || target.key == "h" ||target.key == "i" ||target.key == "j" ||target.key == "k" ||target.key == "l" ||
-      target.key == "m" || target.key == "n" ||target.key == "o" ||target.key == "p" ||target.key == "q" ||target.key == "r" ||
-      target.key == "s" || target.key == "t" ||target.key == "u" ||target.key == "v" ||target.key == "w" ||target.key == "x" ||
-      target.key == "y" || target.key == "z"){
-              var Editor = document.getElementById(target.id).value;
-            document.getElementById(target.id).value = Editor.slice(0,Editor.length-1);                                                                        
-   }
+       
+ document.getElementById("Bedroom").addEventListener("keyup", function(event){
+ if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"&&Device=="Phone"){
+        var Editor = document.getElementById("Bedroom").value;
+            document.getElementById("Bedroom").value = Editor.slice(0,Editor.length-1);
  }
-        
+});
+ 
 document.getElementById("Bedroom").addEventListener("keydown", function(event){
    if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"){    
     event.preventDefault();
@@ -233,10 +230,11 @@ document.getElementById("Bathroom").addEventListener("keyup", function(event){
  if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"&&Device=="Phone"){
         var Editor = document.getElementById("Bathroom").value;
             document.getElementById("Bathroom").value = Editor.slice(0,Editor.length-1);
-  alert("Worked");
  }
 });
 
+ 
+ 
 document.getElementById("Bathroom").addEventListener("keydown", function(event){
    if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"){
   event.preventDefault();
@@ -256,7 +254,12 @@ document.getElementById("Error").innerHTML = "Please type in a number."
 }
 });
 
-
+document.getElementById("howbigishome").addEventListener("keyup", function(event){
+ if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"&&Device=="Phone"){
+        var Editor = document.getElementById("howbigishome").value;
+            document.getElementById("howbigishome").value = Editor.slice(0,Editor.length-1);
+ }
+});
 
 document.getElementById("howbigishome").addEventListener("keydown", function(event){
    if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"){
