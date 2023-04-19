@@ -196,21 +196,22 @@ if (Device=="Phone"){
             document.getElementById("howbigishome").style.left = '15%';
          }  
  
- 
-
+           function RemoveText(target){
+            
+       
+           }
+        
 document.getElementById("Bedroom").addEventListener("keydown", function(event){
-   if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"){
-     if (Device == "Phone"){
-     document.getElementById("Bedroom").value = "";
-      alert("Test1");
-     }
-    
-    
+   if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"){    
     event.preventDefault();
 document.getElementById("Error").style.visibility = "visible";
 document.getElementById("Error").innerHTML = "Please type in a number."
   const NumOccured = setInterval(NumberTest,1500);
   function NumberTest(){
+   if (document.getElementById("Bedroom").value.toUpperCase()!= document.getElementById("Bedroom").value.toLowerCase()){
+            document.getElementById("Bedroom").value = "";
+    alert("Sequence");
+            }
    if (document.getElementById("Error").style.visibility == "visible"){
   document.getElementById("Error").style.visibility = "hidden";
   clearInterval(NumOccured);
