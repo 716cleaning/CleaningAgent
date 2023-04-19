@@ -123,22 +123,19 @@ onclick =  "ClearPreText(this)"
 value = "Town/City">
 
 <input  type = "text" id = "Bedroom" name = "Bedroom"
-onclick =  "ClearPreText(this)" 
-onkeyup = "WordTarget(this)"       
+onclick =  "ClearPreText(this)"    
 value="Bedroom(s)">
   
 
 
 <input type = "text" id = "Bathroom"  name = "Bathroom"
-onclick="ClearPreText(this)" 
-onkeyup = "WordTarget(this)"              
+onclick="ClearPreText(this)"             
 value="Bathroom(s)">
 
 
 
 <input  type = "text" id = "howbigishome" name = "sqft"
 onclick="ClearPreText(this)"
-onkeyup = "WordTarget(this)"              
 value="Sq. ft of home (An Estimate is allowed)">
   
 <input type = "submit" id = "Submit"
@@ -212,7 +209,7 @@ if (Device=="Phone"){
  }
         
 document.getElementById("Bedroom").addEventListener("keydown", function(event){
-   if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !=""){    
+   if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"){    
     event.preventDefault();
 document.getElementById("Error").style.visibility = "visible";
 document.getElementById("Error").innerHTML = "Please type in a number."
@@ -233,7 +230,7 @@ document.getElementById("Error").innerHTML = "Please type in a number."
 
 
 document.getElementById("Bathroom").addEventListener("keydown", function(event){
-   if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !=""){
+   if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"){
   event.preventDefault();
 document.getElementById("Error").style.visibility = "visible";
 document.getElementById("Error").innerHTML = "Please type in a number."
@@ -253,7 +250,7 @@ document.getElementById("Error").innerHTML = "Please type in a number."
 
 
 document.getElementById("howbigishome").addEventListener("keydown", function(event){
-   if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !=""){
+   if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"){
   event.preventDefault();
 document.getElementById("Error").style.visibility = "visible";
 document.getElementById("Error").innerHTML = "Please type in a number."
