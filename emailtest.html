@@ -228,8 +228,9 @@ document.getElementById("Error").innerHTML = "Please type in a number."
 
 document.getElementById("Bathroom").addEventListener("keyup", function(event){
  if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"&&Device=="Phone"){
-        var Editor = document.getElementById("Bathroom").value;
-            document.getElementById("Bathroom").value = Editor.slice(0,Editor.length-1);
+  alert(event.key);      
+  var Editor = document.getElementById("Bathroom").value;
+         document.getElementById("Bathroom").value = Editor.slice(0,Editor.length-1);
  }
 });
 
