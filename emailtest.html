@@ -199,10 +199,12 @@ if (Device=="Phone"){
  
        
  document.getElementById("Bedroom").addEventListener("keyup", function(event){
-  
- if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"&&Device=="Phone"){
-        var Editor = document.getElementById("Bedroom").value;
-            document.getElementById("Bedroom").value = Editor.slice(0,Editor.length-1);
+  var char = "";
+  var Editor = document.getElementById("Bedroom").value;
+ var char = Editor.slice(Editor.length-1, Editor.length);
+ if (char !="1"&& char!="2"&& char !="3"&& char !="4"&&  char !="5"&&  char !="6"&&  char !="7"&&  char !="8"&& char !="9" &&  char !="0" &&Device=="Phone"){
+  var Editor = document.getElementById("Bedroom").value;
+         document.getElementById("Bedroom").value = Editor.slice(0,Editor.length-1);
  }
 });
  
@@ -232,12 +234,8 @@ document.getElementById("Bathroom").addEventListener("keyup", function(event){
   var Editor = document.getElementById("Bathroom").value;
  var char = Editor.slice(Editor.length-1, Editor.length);
  if (char !="1"&& char!="2"&& char !="3"&& char !="4"&&  char !="5"&&  char !="6"&&  char !="7"&&  char !="8"&& char !="9" &&  char !="0" &&Device=="Phone"){
-  alert(event.key);      
-  if (UpLength < Editor.Length){
   var Editor = document.getElementById("Bathroom").value;
          document.getElementById("Bathroom").value = Editor.slice(0,Editor.length-1);
-   
- }
  }
 });
 
@@ -263,10 +261,12 @@ document.getElementById("Error").innerHTML = "Please type in a number."
 }
 });
 
-document.getElementById("howbigishome").addEventListener("keyup", function(event){
- if (event.key !="1"&& event.key !="2"&& event.key !="3"&& event.key !="4"&&  event.key !="5"&&  event.key !="6"&&  event.key !="7"&&  event.key !="8"&& event.key !="9" &&  event.key !="0"&& event.key !="Backspace"&&Device=="Phone"){
-        var Editor = document.getElementById("howbigishome").value;
-            document.getElementById("howbigishome").value = Editor.slice(0,Editor.length-1);
+document.getElementById("howbigishome").addEventListener("keyup", function(event){ var char = "";
+  var Editor = document.getElementById("howbigishome").value;
+ var char = Editor.slice(Editor.length-1, Editor.length);
+ if (char !="1"&& char!="2"&& char !="3"&& char !="4"&&  char !="5"&&  char !="6"&&  char !="7"&&  char !="8"&& char !="9" &&  char !="0" &&Device=="Phone"){
+  var Editor = document.getElementById("howbigishome").value;
+         document.getElementById("howbigishome").value = Editor.slice(0,Editor.length-1);
  }
 });
 
