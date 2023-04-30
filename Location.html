@@ -12,13 +12,13 @@ content="height=device-height, initial-scale=1.0"
 #LocationText{
 position: absolute;
 left: 1%;	
-top: 25%;
+top: 0%;
 width:30%;
 height:74%;
 font-family: "Arial";
 font-style: bold;
 white-space: pre-wrap;
-word-wrap: break-word;    
+word-wrap: break-word;
 font-size: 20px;	
 }	
 
@@ -67,6 +67,10 @@ onContextMenu="return false;"
             document.getElementById("Buffalo").style.width = '60%';
              document.getElementById("Buffalo").style.overflow = "scroll";
          }    
+         else {
+            document.getElementById("LocationText").style.top = '25%';
+            document.getElementById("LocationText").style.fontSize = '1.4em';
+         }
 </script>
 </meta>
 </html>
