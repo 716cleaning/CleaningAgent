@@ -112,6 +112,19 @@ overflow: auto;
 background-color: #FDD20D;
 }
 
+#HomeButton{
+	position: absolute;
+	background-image: url('homebutton.png');
+	 background-size: 100% 100%;
+	 border: none;
+	background-color: transparent;
+top:2%;
+width: 7%;
+height: 10%;
+left: 0%;
+}
+
+
 </style>
 <body bgcolor="#80bfff">
 
@@ -124,7 +137,14 @@ onmousedown="return false"
 onContextMenu="return false;"
 ></img>
 
-
+<button id ="HomeButton" src="homebutton.png"
+onclick="HomePage()"
+onContextMenu="return false;"
+onmousedown="return false;"
+onmouseover="HomePageBorderAnimate(this)" 
+onmouseup="HomePageBorderRemove(this)"
+onmouseleave="HomePageBorderRemove(this)"
+></button>
 
 <nav id="ButtonDisplay">
 
@@ -445,6 +465,19 @@ clearInterval(test);
 }
 }
 
+
+function HomePage(){
+	document.getElementById("HTMLCast").src = "castanim.html";
+
+}
+
+function  HomePageBorderAnimate(home) {
+	document.getElementById(home.id).style.border = ".5em solid #FDD20D"
+}
+
+function  HomePageBorderRemove(home) {
+	document.getElementById(home.id).style.border = null;
+}
 </script>
 
 

@@ -18,44 +18,52 @@
 
  #ItemCast{
   position: absolute;
-left: 35%;
+left: 32%;
 top: 2%;
 bottom: 2%;
 width: 35%;
 height: 96%;
 animation-name: CastImg;
-  animation-duration: 36s;
+  animation-duration: 48s;
   animation-iteration-count: infinite;
   animation-direction: normal;  
  }
 
 @keyframes CastImg {
-10% {
+8% {
   content: url('Showerfloor.jpg');
 }
 
-20% {
+16% {
  content: url('showerhead043023.jpg');
 }
 
 
-
-30% {
+24% {
   content: url('BathroomAfter.jpg');
 }
 
 
-40%{
+32% {
+  content: url('basementfloor050423.jpg');
+}
+
+40% {
+  content: url('basementfloorafter050423.jpg');
+}
+
+
+48%{
   content: url('stove043023.jpg');
 }
-50%{
+56%{
   content: url('120niagrabefore.jpg');
 }
 
-60%{
+64%{
   content: url('120niagraafter.jpg');
 }
-70%{
+72%{
   content: url('stove.jpg');
 }
 
@@ -64,12 +72,13 @@ animation-name: CastImg;
 }
 
 
-90% {
+88% {
  content: url('sink043023.jpg');
 }
 
 100% {
- content: url('sink043023.jpg');
+ content: url('sink043023.jpg'); 
+ <!--12 pictures-->
 }
 }
 
@@ -81,23 +90,5 @@ animation-name: CastImg;
 </body>
 
 <script>
- 
-  var Device = "Computer";
-	var LogoFix = (window.innerWidth/4);
-	if (navigator.userAgent.match(/Android/i)
-         || navigator.userAgent.match(/webOS/i)
-         || navigator.userAgent.match(/iPhone/i)
-         || navigator.userAgent.match(/iPad/i)
-         || navigator.userAgent.match(/iPod/i)
-         || navigator.userAgent.match(/BlackBerry/i)
-         || navigator.userAgent.match(/Windows Phone/i)) {
-            Device = "Phone";
-		document.getElementById("ItemCast").style.width = '96%';
-		document.getElementById("ItemCast").style.height = '96%';
-		document.getElementById("ItemCast").style.left = '2%';
-		document.getElementById("ItemCast").style.right = '2%';
-		document.getElementById("ItemCast").style.top = '2%';
-		document.getElementById("ItemCast").style.bottom = '2%';
-         }
 </script>
 </html>
