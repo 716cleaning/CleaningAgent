@@ -487,7 +487,18 @@ function HomePage(){
 }
 
 function  HomePageBorderAnimate(home) {
+	if (Device=="Computer"){
 	document.getElementById(home.id).style.border = ".5em solid #FDD20D"
+
+document.getElementById("Locations").style.color = "black"
+document.getElementById("Estimate").style.color = "black"
+document.getElementById("Contact").style.color = "black"
+document.getElementById("Services").style.color = "black"
+document.getElementById("ServicesAnim").style.visibility = "hidden";
+document.getElementById("ContactAnim").style.visibility = "hidden";
+document.getElementById("EstimateAnim").style.visibility = "hidden";
+document.getElementById("LocationsAnim").style.visibility = "hidden";
+}
 }
 
 function  HomePageBorderRemove(home) {
