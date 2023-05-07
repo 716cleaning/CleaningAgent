@@ -137,14 +137,14 @@ onmousedown="return false"
 onContextMenu="return false;"
 ></img>
 
-<button id ="HomeButton" src="homebutton.png"
+<img id ="HomeButton" src="homebutton.png"
 onclick="HomePage()"
 onContextMenu="return false;"
 onmousedown="return false;"
 onmouseover="HomePageBorderAnimate(this)" 
 onmouseup="HomePageBorderRemove(this)"
 onmouseleave="HomePageBorderRemove(this)"
-></button>
+></img>
 
 <nav id="ButtonDisplay">
 
@@ -326,6 +326,7 @@ document.getElementById("Locations").style.color = "black"
 document.getElementById("Estimate").style.color = "black"
 document.getElementById("Contact").style.color = "black"
 
+document.getElementById("HomeButton").style.border = null;
 document.getElementById("ContactAnim").style.visibility = "hidden";
 document.getElementById("EstimateAnim").style.visibility = "hidden";
 document.getElementById("LocationsAnim").style.visibility = "hidden";
