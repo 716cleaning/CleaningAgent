@@ -495,9 +495,8 @@ document.getElementById("LocationsAnim").style.visibility = "hidden";
 }
 else if (Device=="Phone"){
 	document.getElementById("HomeButton").style.backgroundColor = "#FDD20D";
-	setTimeout(function homepagecolor (){
+	window.setTimeout(function homepagecolor (){
 	document.getElementById("HomeButton").style.backgroundColor = "transparent";
-	clearTimeout(homepagecolor);
 	},300);
 }
 }
