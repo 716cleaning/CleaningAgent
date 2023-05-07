@@ -477,7 +477,11 @@ clearInterval(test);
 
 function HomePage(){
 	document.getElementById("HTMLCast").src = "castanim.html";
-
+if (Device=="Phone"){
+	document.getElementById("HomeButton").style.backgroundColor = "#FDD20D";
+	window.setTimeout(function homepagecolor (){
+	document.getElementById("HomeButton").style.backgroundColor = "transparent";
+	},350);
 }
 
 function  HomePageBorderAnimate(home) {
@@ -492,12 +496,6 @@ document.getElementById("ServicesAnim").style.visibility = "hidden";
 document.getElementById("ContactAnim").style.visibility = "hidden";
 document.getElementById("EstimateAnim").style.visibility = "hidden";
 document.getElementById("LocationsAnim").style.visibility = "hidden";
-}
-else if (Device=="Phone"){
-	document.getElementById("HomeButton").style.backgroundColor = "#FDD20D";
-	window.setTimeout(function homepagecolor (){
-	document.getElementById("HomeButton").style.backgroundColor = "transparent";
-	},300);
 }
 }
 
