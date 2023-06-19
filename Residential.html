@@ -194,6 +194,31 @@ You can also check the "Special Services" tab. </pre>
 <img id = "BackButton" src = "backbutton.png" onclick="Back(this)">
 </body>
 <script type="text/javascript">
+   
+
+   if (navigator.userAgent.match(/Android/i)
+         || navigator.userAgent.match(/webOS/i)
+         || navigator.userAgent.match(/iPhone/i)
+         || navigator.userAgent.match(/iPad/i)
+         || navigator.userAgent.match(/iPod/i)
+         || navigator.userAgent.match(/BlackBerry/i)
+         || navigator.userAgent.match(/Windows Phone/i)) {
+            Device = "Phone";
+  
+
+  document.getElementById("MainText").style.width =  '60%';
+  document.getElementById("MainText").style.height =  '15%';
+  document.getElementById("MainText").style.left =  '20%';
+
+  document.getElementById("BackButton").style.width =  '10%';
+  document.getElementById("BackButton").style.height =  '6%';
+  document.getElementById("BackButton").style.height =  '6%';
+
+  document.getElementById("NoteText").style.fontSize = '1.2em';
+}
+
+
+
 
  function Back(anim){
 window.location.assign("Services.html");
