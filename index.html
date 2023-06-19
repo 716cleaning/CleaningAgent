@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0"
 content="height=device-height, initial-scale=1.0"
 > 
@@ -41,7 +42,7 @@ top:30%;
 width: 20%;
 margin-left: 4%;
 border-top-style: none;
-font-family: "Arial";
+font-family: Arial;
 font-style: bold;
 font-size:1.4em;
 
@@ -69,6 +70,8 @@ width: 99%;
 visibility: true;
 height: calc(99% - 38%);
 }
+
+
 
 #ServicesAnim{
 	position: absolute;
@@ -122,6 +125,7 @@ width: 3%;
 height: 5%;
 left: 0%;
 }
+
 
 
 </style>
@@ -182,6 +186,7 @@ onclick="Click(this)"
 <div id = "LocationsAnim" ></div>
 <div id = "EstimateAnim" ></div>
 <div id = "ContactAnim" ></div>
+
 
 
 <script>
@@ -256,9 +261,9 @@ document.getElementById("HTMLCast").style.visibility = "visible";
 
 if (id.id == "Estimate"){
 
-if 	((document.getElementById("HTMLCast").src.includes("emailtest.html"))==false){
+if 	((document.getElementById("HTMLCast").src.includes("GetEstimate.html"))==false){
 	console.log(document.getElementById("HTMLCast").src);
-window.location.assign ("emailtest.html");	
+window.location.assign ("GetEstimate.html");	
 }
 }
 
@@ -503,6 +508,7 @@ document.getElementById("LocationsAnim").style.visibility = "hidden";
 function  HomePageBorderRemove(home) {
 	document.getElementById(home.id).style.border = null;
 }
+
 
 </script>
 

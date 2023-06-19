@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+</head>
+
 <style type="text/css">
    
   html{
@@ -15,70 +21,66 @@
    width: 100%;
    height: 100%;
     }
-    
 
-	#P1{
-		position: absolute;
-		top:0%;
-		left: 2%;
-    width: 46%;
-     white-space: pre-wrap;   
-  word-wrap: break-word;
-font-family: "Arial";
+#Residential{
+  position: absolute;
+left: 10%;
+top: 20%;
+width: 15%;
+height: 10%;
+font-family: 'Quicksand', Arial;
 font-style: bold;
-font-size: 1.4em;	
-	}
-
-	#P2{
-		position: absolute;
-     white-space: pre-wrap;   
+font-size: 1.4em;
+ white-space: pre-wrap;   
   word-wrap: break-word;
-		top: 0%;
-    width: 48%;
-		left:50%;
-font-family: "Arial";
-font-style: bold;
-font-size: 1.4em;		
-color: green;
-	}
-	
+}
 
+#Commercial{
+  position: absolute;
+left: 45%;
+width: 15%;
+height: 10%;
+top: 20%;
+font-family: 'Quicksand', Arial;
+font-style: bold;
+font-size: 1.4em;
+ white-space: pre-wrap;   
+  word-wrap: break-word;
+}
+
+#SpecServices{
+  position: absolute;
+left: 75%;
+top: 20%;
+width: 15%;
+height: 10%;
+font-family: 'Quicksand', Arial;
+font-style: bold;
+font-size: 1.4em;
+ white-space: pre-wrap;   
+  word-wrap: break-word;
+  color: green;
+}
 
 	
 </style>
 <body bgcolor="white">
-<pre id = "P1">
-Our services include:
-       <li> Vacuum/Sweep floors </li>
-       <li> Mopping floors </li>
-       <li> Cleaning sink and bathtub area</li>
-       <li> Cleaning kitchen surfaces</li>
-       <li> Washing dishes </li>
-       <li> Clearing out trash</li>
-       <li> Wiping appliances surfaces and </li>
-       many more.
 
-	</pre>
+<p id = "Residential" onmouseleave="MouseOut(this)" onmouseover="Animate(this)" onclick="ShowPage(this)">
+Residential</p>
 
-<pre id="P2">We also handle special services like:
-         <li>Laundry </li>
-         <li>Ironing </li>
-         <li>Basement cleaning</li>  
-     <li>Cleaning small commercial buildings under 3500
-      sq. ft and etc. </li>
+<p id = "Commercial" onmouseleave="MouseOut(this)" onmouseover="Animate(this)" onclick="ShowPage(this)">
+Commercial</p>
 
 
-You can call or text us at 716-567-8438
- for a free quote!
-</pre>
-
+<p id = "SpecServices" onmouseleave="MouseOut(this)" onmouseover="Animate(this)" onclick="ShowPage(this)">
+Special Services</p>
 </body>
-	
-	<script>
+<script type="text/javascript">
 
-    var Device = "Computer";
-    
-    if (navigator.userAgent.match(/Android/i)
+   var Device = "Computer";
+  var LogoFix = (window.innerWidth/4);
+  if (navigator.userAgent.match(/Android/i)
          || navigator.userAgent.match(/webOS/i)
          || navigator.userAgent.match(/iPhone/i)
          || navigator.userAgent.match(/iPad/i)
@@ -86,11 +88,79 @@ You can call or text us at 716-567-8438
          || navigator.userAgent.match(/BlackBerry/i)
          || navigator.userAgent.match(/Windows Phone/i)) {
             Device = "Phone";
-         }
+}
+  
 
-         if (Device =="Phone"){
-            document.getElementById("P1").style.fontSize = '.9em';
-            document.getElementById("P2").style.fontSize = '.9em';
-         }    
+
+
+
+
+
+
+ function  Animate(animation) {
+  if (animation.id == "Residential"){
+  document.getElementById("Residential").style.color = "green"
+  document.getElementById("Commercial").style.color = "black"
+  document.getElementById("SpecServices").style.color = "black"
+  }
+
+  if (animation.id == "Commercial"){
+  document.getElementById("Commercial").style.color = "green"
+    document.getElementById("SpecServices").style.color = "black"
+  document.getElementById("Residential").style.color = "black"
+  }
+
+  if (animation.id == "SpecServices"){
+  document.getElementById("SpecServices").style.color = "green"
+    document.getElementById("Commercial").style.color = "black"
+  document.getElementById("Residential").style.color = "black"
+  }
+ }
+
+ function MouseOut(animation){
+  if (animation.id == "Residential"){
+  document.getElementById("Residential").style.color = "black"
+  document.getElementById("Commercial").style.color = "black"
+  document.getElementById("SpecServices").style.color = "green"
+  }
+
+  if (animation.id == "Commercial"){
+  document.getElementById("Residential").style.color = "black"
+  document.getElementById("Commercial").style.color = "black"
+  document.getElementById("SpecServices").style.color = "green"
+  }
+
+  if (animation.id == "SpecServices"){
+  document.getElementById("Residential").style.color = "black"
+  document.getElementById("Commercial").style.color = "black"
+  document.getElementById("SpecServices").style.color = "green"
+  }
+ }
+
+
+
+
+
+
+
+
+function ShowPage(page){
+if (page.id== "Residential"){
+  window.location.href = "Residential.html"; 
+}
+
+if (page.id== "Commercial"){
+  window.location.href = "Commercial.html"; 
+}
+
+
+if (page.id== "SpecServices"){
+  window.location.href = "SpecialServices.html"; 
+}
+
+};
+
+
+
 </script>
 <html>

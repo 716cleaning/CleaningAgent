@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+<style type="text/css">
+   
+
+   body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     overflow-y: scroll;
+    }
+#Sweep{
+  position: absolute;
+ background-size: contains;
+left: 5%;
+top: 60%;
+width: 10%;
+height: 20%;
+user-select: none;
+}
+
+#Vacuum{
+  position: absolute;
+ background-size: contains;
+left: 5%;
+top: 100%;
+width: 10%;
+height: 20%;
+user-select: none;
+}
+
+#Mop{
+  position: absolute;
+ background-size: contains;
+left: 5%;
+top: 140%;
+width: 10%;
+height: 20%;
+user-select: none;
+}
+
+
+#Dusting{
+  position: absolute;
+ background-size: contains;
+left: 5%;
+top: 180%;
+width: 7%;
+height: 20%;
+user-select: none;
+}
+
+#ETC{
+  position: absolute;
+ background-size: contains;
+left: 5%;
+top: 230%;
+width: 7%;
+height: 20%;
+user-select: none;
+}
+
+#SweepText{
+    position: absolute;
+     white-space: pre-wrap;   
+  word-wrap: break-word;
+    left: 20%;
+top: 60%;
+width: 20%;
+height: 10%;
+font-family: 'Quicksand', Arial;
+font-style: bold;
+font-size: 1.4em;   
+color: black;
+
+}
+
+#VacuumText{
+    position: absolute;
+     white-space: pre-wrap;   
+  word-wrap: break-word;
+    left: 20%;
+top: 100%;
+width: 20%;
+height: 10%;
+font-family: 'Quicksand', Arial;
+font-style: bold;
+font-size: 1.4em;   
+color: black;
+
+}
+
+#MopText{
+    position: absolute;
+     white-space: pre-wrap;   
+  word-wrap: break-word;
+    left: 20%;
+top: 140%;
+width: 20%;
+height: 10%;
+font-family: 'Quicksand', Arial;
+font-style: bold;
+font-size: 1.4em;   
+color: black;
+
+}
+
+#DustingText{
+    position: absolute;
+     white-space: pre-wrap;   
+  word-wrap: break-word;
+    left: 20%;
+top: 180%;
+width: 20%;
+height: 10%;
+font-family: 'Quicksand', Arial;
+font-style: bold;
+font-size: 1.4em;   
+color: black;
+
+}
+
+#ETCText{
+    position: absolute;
+     white-space: pre-wrap;   
+  word-wrap: break-word;
+    left: 20%;
+top: 228%;
+width: 80%;
+height: 20%;
+font-family: 'Quicksand', Arial;
+font-style: bold;
+font-size: 1.4em;   
+color: green;
+
+}
+
+#BackButton{
+    position:absolute;
+    left: 10%;
+top: 20%;
+width: 4%;
+height:10%;
+color: black;
+}
+
+
+#MainText{
+    position: absolute;
+     white-space: pre-wrap;   
+  word-wrap: break-word;
+    width: 30%;
+top: 10%;
+left: 45%;
+font-family: 'Quicksand', Arial;
+font-style: bold;
+text-decoration: underline;
+font-size: 2.5em;   
+
+}
+
+
+
+
+</style>
+<body bgcolor="white">
+<img id = "Sweep" src = "broomicon.png" onmousedown="return false" 
+onContextMenu="return false">
+<img id = "Vacuum" src = "vacuumicon.png" onmousedown="return false" 
+onContextMenu="return false">
+<img id = "Mop" src = "mopicon.png" onmousedown="return false" 
+onContextMenu="return false">
+<img id = "Dusting" src = "dustingicon.png" onmousedown="return false" 
+onContextMenu="return false">
+<img id = "ETC" src = "etcicon.png" onmousedown="return false" 
+onContextMenu="return false">
+
+
+<pre id ="MainText">Residential</pre>
+<pre id ="SweepText">Sweeping</pre>
+<pre id ="VacuumText">Vacuuming</pre>
+<pre id ="MopText">Mopping</pre>
+<pre id ="DustingText">Dusting/Wiping Surfaces</pre>
+<pre id ="ETCText">We handle many other home services. You can give us a call or email. 
+
+You can also check the "Special Services" tab. </pre>
+
+<img id = "BackButton" src = "backbutton.png" onclick="Back(this)">
+</body>
+<script type="text/javascript">
+
+ function Back(anim){
+window.location.assign("Services.html");
+console.log(window.location.href);
+}
+</script>
+</html>

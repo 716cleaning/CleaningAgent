@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+<head>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+</head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"
 content="height=device-height, initial-scale=1.0"
 > 
@@ -13,13 +19,13 @@ content="height=device-height, initial-scale=1.0"
 position: absolute;
 left: 1%;	
 top: 0%;
-width:30%;
+width:55%;
 height:74%;
-font-family: "Arial";
+font-family: 'Quicksand',Arial;
 font-style: bold;
 white-space: pre-wrap;
 word-wrap: break-word;
-font-size: 20px;	
+font-size: 1em;	
 }	
 
 #Buffalo{
@@ -32,8 +38,7 @@ height:100%;
 </style>
 
 <body bgcolor="white">
-<pre id="LocationText">
-We're located in Buffalo!. 
+<pre id="LocationText"> We're located in Buffalo!. 
 
 We service neighboring areas, up to a 25mi radius
 like Cheektowaga, Williamsville, Amherst, Tonawanda and N.T., 
@@ -66,7 +71,7 @@ onContextMenu="return false;"
             document.body.style.overflow = "scroll";
             document.getElementById("Buffalo").style.width = '60%';
              document.getElementById("Buffalo").style.overflow = "scroll";
-            document.getElementById("LocationText").style.fontSize = '1em';
+            document.getElementById("LocationText").style.fontSize = '.8em';
          }    
          else {
             document.getElementById("LocationText").style.top = '25%';
